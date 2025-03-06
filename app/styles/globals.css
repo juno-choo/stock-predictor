@@ -1,0 +1,72 @@
+/* app/styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #1a202c; /* dark background */
+  --foreground: #e2e8f0; /* light text */
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main container styling */
+.main-container {
+  @apply min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white flex flex-col items-center py-8 px-4;
+}
+
+/* Header styling */
+.header {
+  @apply text-4xl font-bold mb-6;
+}
+
+/* Form container styling */
+.form-container {
+  @apply w-full max-w-md bg-gray-700 p-6 rounded-lg shadow-lg;
+}
+
+/* Chart container styling */
+.chart-container {
+  @apply mt-8 w-full max-w-4xl bg-gray-700 p-6 rounded-lg shadow-lg;
+}
+
+/* Loading text styling */
+.loading-text {
+  @apply mt-4;
+}
+
+/* Empty state text styling */
+.empty-text {
+  @apply mt-4 text-gray-400;
+}
+
+/* StockForm component styling */
+.stock-form {
+  @apply flex flex-col gap-4;
+}
+
+.stock-input {
+  @apply px-4 py-2 rounded bg-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-purple-500;
+}
+
+.stock-button {
+  @apply px-4 py-2 rounded bg-purple-600 hover:bg-purple-700 transition-colors;
+}
+
+/* StockChart wrapper styling */
+.chart-wrapper {
+  @apply w-full h-96;
+}
+
+.dropdown {
+  @apply absolute z-10 w-full bg-gray-600 text-white max-h-60 overflow-y-auto mt-1 rounded;
+}
+
+.dropdown-item {
+  @apply px-4 py-2 hover:bg-gray-500 cursor-pointer;
+}
+
